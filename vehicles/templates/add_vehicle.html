@@ -1,4 +1,20 @@
 <!-- add_vehicle.html -->
+
+<!-- NUEVO FORMATO add_vehicle.html -->
+{% extends 'base.html' %}
+
+{% block title %}Add Vehicle{% endblock %}
+
+{% block content %}
+    <h1>Add Vehicle</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+{% endblock %}
+
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,3 +31,4 @@
     </form>    
 </body>
 </html>
+-->
